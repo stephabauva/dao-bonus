@@ -3,15 +3,15 @@ import { network, ethers } from "hardhat"
 import { proposalsFile, developmentChains, VOTING_PERIOD } from "../helper-hardhat-config"
 import { moveBlocks } from "../utils/move-blocks"
 
-const index = 0
+const index = 0 // --> COULD BE AUTOMATED
 
 async function main(proposalIndex: number) {
   const proposals = JSON.parse(fs.readFileSync(proposalsFile, "utf8"))
   // You could swap this out for the ID you want to use too
   const proposalId = proposals[network.config.chainId!][proposalIndex]
   // 0 = Against, 1 = For, 2 = Abstain for this example
-  const voteWay = 1
-  const reason = "I lika do da cha cha"
+  const voteWay = 1 //--> COULD BE AUTOMATED
+  const reason = "showed good performances" // --> COULD BE AUTOMATED
   await vote(proposalId, voteWay, reason)
 }
 

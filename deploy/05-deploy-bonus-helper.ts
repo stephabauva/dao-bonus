@@ -4,29 +4,29 @@ import verify from "../helper-functions"
 import { networkConfig, developmentChains } from "../helper-hardhat-config"
 import { ethers } from "hardhat"
 
-const deployBox: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const deployBonus: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // @ts-ignore
   const { getNamedAccounts, deployments, network } = hre
   const { deploy, log } = deployments
   const { deployer } = await getNamedAccounts()
   log("----------------------------------------------------")
-  log("Deploying Box and waiting for confirmations...")
-  const box = await deploy("Box", {
+  log("Deploying Bonus and waiting for confirmations...")
+  const bonus = await deploy("Bonus", {
     from: deployer,
     args: [],
     log: true,
     // we need to wait if on a live network so we can verify properly
     waitConfirmations: networkConfig[network.name].blockConfirmations || 1,
   })
-  log(`Box at ${box.address}`)
+  log(`Bonus at ${bonus.address}`)
   if (!developmentChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {
-    await verify(box.address, [])
+    await verify(bonus.address, [])
   }
-  const boxContract = await ethers.getContractAt("Box", box.address)
+  const bonusContract = await ethers.getContractAt("Bonus", bonus.address)
   const timeLock = await ethers.getContract("TimeLock")
-  const transferTx = await boxContract.transferOwnership(timeLock.address)
+  const transferTx = await bonusContract.transferOwnership(timeLock.address)
   await transferTx.wait(1)
 }
 
-export default deployBox
-deployBox.tags = ["all", "box"]
+export default deployBonus
+deployBonus.tags = ["all", "bonus"]

@@ -28,6 +28,6 @@ export const VOTING_PERIOD = 5 // blocks
 export const VOTING_DELAY = 1 // 1 Block - How many blocks till a proposal vote becomes active
 export const ADDRESS_ZERO = "0x0000000000000000000000000000000000000000"
 
-export const NEW_STORE_VALUE = 77
-export const FUNC = "store"
-export const PROPOSAL_DESCRIPTION = "Proposal #1 77 in the Box!"
+export const NEW_STORE_VALUE = '0x7b45f0D9ccAb8a104365fF7c00C4111801c00CC1'
+export const FUNC = "storeBonusOwner"
+export const PROPOSAL_DESCRIPTION = "Proposal Team 2 as new bonus owner"

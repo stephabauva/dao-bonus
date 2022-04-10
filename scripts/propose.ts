@@ -12,12 +12,12 @@ import { moveBlocks } from "../utils/move-blocks"
 
 export async function propose(args: any[], functionToCall: string, proposalDescription: string) {
   const governor = await ethers.getContract("GovernorContract")
-  const box = await ethers.getContract("Box")
-  const encodedFunctionCall = box.interface.encodeFunctionData(functionToCall, args)
-  console.log(`Proposing ${functionToCall} on ${box.address} with ${args}`)
+  const bonus = await ethers.getContract("Bonus")
+  const encodedFunctionCall = bonus.interface.encodeFunctionData(functionToCall, args)
+  console.log(`Proposing ${functionToCall} on ${bonus.address} with ${args}`)
   console.log(`Proposal Description:\n  ${proposalDescription}`)
   const proposeTx = await governor.propose(
-    [box.address],
+    [bonus.address],
     [0],
     [encodedFunctionCall],
     proposalDescription
@@ -35,6 +35,7 @@ export async function propose(args: any[], functionToCall: string, proposalDescr
   const proposalDeadline = await governor.proposalDeadline(proposalId)
   // save the proposalId
   let proposals = JSON.parse(fs.readFileSync(proposalsFile, "utf8"))
+  console.log('proposals',proposals)
   proposals[network.config.chainId!.toString()].push(proposalId.toString())
   fs.writeFileSync(proposalsFile, JSON.stringify(proposals))
 
