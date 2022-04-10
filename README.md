@@ -1,6 +1,6 @@
 # DAO Bonus
 
-DISCLAIMER: Unfortunetly, I could not inter-connect all pieces together in time, so only isolated pieces can work: It is possible to get the performance from the data from Covalent and you can also do proposal/queueing/voting but it is not yet connected to Superfluid. For now, instead of doing the change of ownership of teh NFT from one team to the other, Timelock only store the address of the winning team in a separate contract.
+DISCLAIMER: Unfortunetly, I could not inter-connect all pieces together in time, so only isolated pieces can work: It is possible to get the performance from the data from Covalent and you can also do proposal/queueing/voting but it is not yet connected to Superfluid. For now, instead of doing the change of ownership of the NFT from one team to the other, Timelock only store the address of the winning team in a separate contract.
 
 ## The idea 
 The idea of this project is to reward teams that manage portfolios for a fund manager. For example, Team 1 is in charge of a partfolio of certains assets, Team 2 is in charge of a portfolio of other assets, etc..
@@ -10,10 +10,10 @@ The best team gets rewarded an NFT with carries streams from Superfluid.
 Each team has a specific target growth to reach.
 For e.g. Team 1 is in charge of mature/well-established assets. The growth rate needed for Team 1 to get and the NFT is 5%.
 
-Once all calculation are done, we can imagine a certain duration in which those performances are review through reportings.
+Once all calculation are done, we can imagine a certain duration where those performances are reviewed (e.g. via reportings).
 
-Once reports have been read, a proposal is created to vote for the transfer of the NFT to another team.
-If the vote passes, then the Bonus NFT ownership changes to the best performing team which will from now on receive the flow from the NFT via Superluid.
+Once performances have been reviewed, if a team has outperformed the current NFT holder, a proposal is created to vote for the transfer of the NFT that another team.
+If the vote passes, then the Bonus NFT ownership changes to the best performing team which will receive the flow from the NFT via Superluid.
 
 ## Requirements
 
