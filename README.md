@@ -31,7 +31,7 @@ If the vote passes, then the Bonus NFT ownership changes to the best performing 
 
 1. Clone this repo:
 ```
-git clone https://github.com/stephanbv/dao-bonus
+git clone https://github.com/stephanBV/dao-bonus
 cd dao-bonus
 ```
 2. Install dependencies
@@ -72,20 +72,25 @@ Here is the rundown of what the test suite does.
 Additionally, you can do it all manually on your own local network like so:
 
 1. Get the teams performances
-```node 
+```
+node scripts/FindGoodPortfolios.js
+```
+For this example, the current NFT holder is Team 1.
+If we see that for e.g. Team 2 has performed better and should get the NFT with the Superfluid stream, we continue with the proposal below.
 
 2. Setup local blockchain 
 ```
 yarn hardhat node
 ```
 
-3. Propose a new value to be added to our Box contract
+3. Propose a new address to be added to our Bonus contract
+For this example, you can find all parameters in helper-hardhat-config.ts where you can change the value of NEW_STORE_VALUE with the Team address. 
 
 In a second terminal (leave your blockchain running)
 ```
 yarn hardhat run scripts/propose.ts --network localhost
 ```
-node scripts/FindGoodPortfolios.js
+
 ```
 
 4. Vote on that proposal
