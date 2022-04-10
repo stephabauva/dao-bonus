@@ -57,6 +57,7 @@ If you want to deploy to a testnet:
 ```
 node scripts/FindGoodPortfolios.js
 ```
+For simplicity, all previous performances are also hard typed.
 For this example, the current NFT holder is Team 1.
 If we see that for e.g. Team 2 has performed better and should get the NFT with the Superfluid stream, we continue with the proposal below.
 
