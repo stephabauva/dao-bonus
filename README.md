@@ -73,8 +73,6 @@ In a second terminal (leave your blockchain running)
 yarn hardhat run scripts/propose.ts --network localhost
 ```
 
-```
-
 4. Vote on that proposal
 
 ```
