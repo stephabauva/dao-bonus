@@ -1,4 +1,4 @@
-# DAO Bonus
+# DAO Bonus for the EthGlobal DaoHack Hackathon
 
 DISCLAIMER: Unfortunetly, I could not inter-connect all pieces together in time, so only isolated pieces can work: It is possible to get the performance from the data from Covalent and you can also do proposal/queueing/voting but it is not yet connected to Superfluid. For now, instead of doing the change of ownership of the NFT from one team to the other, Timelock only store the address of the winning team in a separate contract.
 
