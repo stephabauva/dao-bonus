@@ -1,7 +1,5 @@
 # DAO Bonus for the EthGlobal DaoHack Hackathon
 
-DISCLAIMER: Unfortunetly, I could not inter-connect all pieces together in time, so only isolated pieces can work: It is possible to get the performance from the data from Covalent and you can also do proposal/queueing/voting but it is not yet connected to Superfluid. For now, instead of doing the change of ownership of the NFT from one team to the other, Timelock only store the address of the winning team in a separate contract.
-
 ## The idea 
 The idea of this project is to reward teams that manage portfolios for a fund manager. For example, Team 1 is in charge of a partfolio of certains assets, Team 2 is in charge of a portfolio of other assets, etc..
 At regular interval, the performance fo each team is measured by getting the overall performance of each portfolio via Covalent and calculating its growth rate. 
@@ -14,6 +12,8 @@ Once all calculation are done, we can imagine a certain duration where those per
 
 Once performances have been reviewed, if a team has outperformed the current NFT holder, a proposal is created to vote for the transfer of the NFT that another team.
 If the vote passes, then the Bonus NFT ownership changes to the best performing team which will receive the flow from the NFT via Superluid.
+
+DISCLAIMER: Unfortunetly, I could not inter-connect all pieces together in time, so only isolated pieces can work: It is possible to get the performance from the data from Covalent and you can also do proposal/queueing/voting but it is not yet connected to Superfluid. For now, instead of doing the change of ownership of the NFT from one team to the other, Timelock only store the address of the winning team in a separate contract.
 
 ## Requirements
 
