@@ -3,7 +3,7 @@
 ## The idea 
 The idea of this project is to reward teams that manage portfolios for a fund manager. For example, Team 1 is in charge of a portfolio of certain assets, Team 2 is in charge of a portfolio of other assets, etc..
 At regular interval, the performance fo each team is measured by getting the overall performance of each portfolio via Covalent and calculating its growth rate. 
-The best team gets rewarded a NFT with carries streams from Superfluid.
+The best team gets rewarded an NFT with carries streams from Superfluid.
 
 Each team has a specific target growth to reach.
 For e.g. Team 1 is in charge of mature/well-established assets. The growth rate needed for Team 1 to get and the NFT is 5%.
